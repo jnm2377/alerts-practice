@@ -36,6 +36,26 @@ class Player {
     }
   }
 
+  fourthQuestion() {
+    let userInput = prompt("Puppies are cute. True or false?", "t or f?");
+    if (userInput.toUpperCase() === "T" || userInput.toUpperCase() === "TRUE") {
+      this.points += 1;
+      alert("Correct! Next question.");
+    } else {
+      alert("Sorry, wrong answer. Better luck next time.")
+    }
+  }
+
+  fifthQuestion() {
+    let userInput = prompt("2 + 2 = 5. True or false?", "t or f?");
+    if (userInput.toUpperCase() === "F" || userInput.toUpperCase() === "FALSE") {
+      this.points += 1;
+      alert("Correct! Next question.");
+    } else {
+      alert("Sorry, wrong answer. Better luck next time.")
+    }
+  }
+
   getTotalPoints() {
     if (this.points < 4) {
       alert('You scored ' + this.points + '/5. You get a bronze star.');
@@ -55,4 +75,7 @@ const player = new Player("Josefina");
 
 player.firstQuestion();
 player.secondQuestion();
+player.thirdQuestion();
+player.fourthQuestion();
+player.fifthQuestion();
 player.getTotalPoints();
